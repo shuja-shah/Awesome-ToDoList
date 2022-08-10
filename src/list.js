@@ -17,7 +17,7 @@ export default class UserInterface{
                 <input type="checkbox" ${item.completed ? "checked" : ""}>
                 <span>${item.description}</span>
                 <button>X</button>
-                <p class="hideme">{item.index}</p>
+                <p class="hideme">${item.index}</p>
             `;
             document.getElementById("list-container").appendChild(listItem);
         })
