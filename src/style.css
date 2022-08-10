@@ -27,7 +27,40 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 360px;
+    width: 100%;
     padding: 0;
     margin: 0;
+}
+.hideme{
+    opacity: 0;
+}
+#list-container li {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.vertical{
+    justify-self: flex-end;
+    color: grey;
+}
+#Addition{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    height: 30px;
+}
+.clearAll{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    height: 48px;
+    text-align: center;
+
 }
