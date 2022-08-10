@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./list.js */ \"./src/list.js\");\n\n\n\n// class ToDoList{\n//     constructor(description, completed ,index){\n//         this.description = description;\n//         this.completed = completed;\n//         this.index= index;\n//     }\n// }\ndocument.addEventListener('DOMContentLoaded', () => {\n  _list_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].ShowList();\n});\n\n//# sourceURL=webpack://awesome-todolist/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./list.js */ \"./src/list.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  _list_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].ShowList();\n});\n\n//# sourceURL=webpack://awesome-todolist/./src/index.js?");
 
 /***/ }),
 
