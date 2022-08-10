@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@100;400;500;600;700;800&family=Lato&family=Poppins:wght@100;300;400;500;600;700&family=Roboto+Mono:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
 body{
     padding: 0;
     margin: 0;
+}
+header{
+    font-family: 'Poppins', sans-serif;
+    color: hsl(0, 0%, 14%);
 }
 li{
     list-style: none;
@@ -9,18 +14,24 @@ li{
 .icon{
     width: auto;
     height: 15px;
+    padding-right: 12px;
 }
 #ParentContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .introList{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 360px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    color: hsl(0, 0%, 14%);
+    border-bottom: 1px solid grey;
 }
 #list-container{
     display: flex;
@@ -35,24 +46,33 @@ li{
     opacity: 0;
 }
 #list-container li {
-    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 .vertical{
     justify-self: flex-end;
     color: grey;
 }
 #Addition{
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    width: 100%;
-    border-left: none;
-    border-right: none;
-    height: 30px;
+    height: 48px;
+    font-size: 'Inter', sans-serif;
+    border: none;
+    font-style: italic;
+    color: hsl(0, 0%, 14%);
+    letter-spacing: 0.87px;
+
+}
+#Addition:hover{
+    background-color: #f5f5f5;
+}
+#Addition::placeholder{
+    color: grey;
+    font-family: 'Inter', sans-serif;
 }
 .clearAll{
     border-top: 1px solid grey;
@@ -62,5 +82,5 @@ li{
     border-right: none;
     height: 48px;
     text-align: center;
-
+    font-family: 'Inter', sans-serif;
 }
