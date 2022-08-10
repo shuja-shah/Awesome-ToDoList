@@ -26,4 +26,8 @@ export default class UserInterface {
       document.getElementById('list-container').appendChild(listItem);
     });
   }
+
+  static AddList() {
+     const addition = document.getElementById('Addition').value;
+  }
 }
