@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    font-style: italic;
+}
+.icon{
+    width: auto;
+    height: 15px;
+}
+#ParentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introList{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+}
+#list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 360px;
+    padding: 0;
+    margin: 0;
+}
