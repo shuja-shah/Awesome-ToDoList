@@ -74,10 +74,10 @@ li {
   height: 48px;
   font-family: 'Inter', sans-serif;
   border: none;
-  font-style: italic;
   color: hsl(0, 0%, 14%);
   letter-spacing: 0.87px;
-  width: 98%;
+  width: 100%;
+  font-weight: 600;
 }
 
 #Addition:hover {
@@ -103,4 +103,7 @@ li {
   height: 48px;
   text-align: center;
   font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 14%);
+  font-weight: 600;
+  letter-spacing: 0.23px;
 }
