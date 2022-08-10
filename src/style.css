@@ -6,6 +6,7 @@ body{
 header{
     font-family: 'Poppins', sans-serif;
     color: hsl(0, 0%, 14%);
+    letter-spacing: 0.50px;
 }
 li{
     list-style: none;
