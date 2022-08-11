@@ -16,21 +16,12 @@ form.addEventListener('submit', (e) => {
 });
 UserInterface.ShowList();
 
-const editTheList = document.querySelectorAll('.myListi');
+const editTheList = document.querySelectorAll('.sibling');
 
 editTheList.forEach((item) => {
   item.addEventListener('click', (e) => {
+    e.target.parentElement.classList.remove('sibling');
     e.target.parentElement.classList.add('none');
-    const template = `
-    <form class = "edit">
-    <input type = "text" class = "input-txt">input</input>
-    <button type = "submit" class = "icon3">ENter</button>
-    <button class = "btn-remove icon3">Remove</button>
-    `;
-    const div = document.createElement('div');
-    div.className = 'edit-div';
-    div.innerHTML = template;
-
-    e.target.parentElement.parentElement.appendChild(div);
+    e.target.parentElement.nextElementSibling.classList.remove('none');
   });
 });

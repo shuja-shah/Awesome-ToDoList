@@ -129,3 +129,16 @@ li {
 .none{
     display: none;
 }
+.input-txt{
+    width: 80%;
+    height: 48px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    color: hsl(0, 0%, 14%);
+    letter-spacing: 0.87px;
+    font-weight: 600;
+}
+.addButton{
+border: none;
+background-color: white;
+}
