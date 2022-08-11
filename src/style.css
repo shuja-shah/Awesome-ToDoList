@@ -137,8 +137,19 @@ li {
     color: hsl(0, 0%, 14%);
     letter-spacing: 0.87px;
     font-weight: 600;
+    background-color:rgb(255, 245, 138);
+    font-size: 16px;
+}
+.input-txt :focus, textarea:focus, select:focus{
+    outline: none;
 }
 .addButton{
 border: none;
 background-color: white;
+}
+.btn-remove{
+    border: none;
+    background-color: white;
+    height: 6px;
+    width: auto;
 }
