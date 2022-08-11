@@ -21,9 +21,13 @@ export default class myStorage {
     localStorage.setItem('myList', JSON.stringify(lists));
   }
 
-  static updateItem(index, list) {
+  static editItem(index, newValue) {
     const lists = myStorage.getData();
-    lists[index] = list;
-    localStorage.setItem('myList', JSON.stringify(lists));
+    lists.forEach((item) => {
+      if (item.index === index) {
+        item.description = newValue;
+      }
+      localStorage.setItem('myList', JSON.stringify(lists));
+    });
   }
 }

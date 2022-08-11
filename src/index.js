@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
   const input = document.getElementById('Addition');
   const description = input.value.toString();
   const completed = false;
-  const index = 0;
+  const index = Math.floor(Math.random() * 1000) + 1;
   const newList = new CreateList(description, completed, index);
   UserInterface.AddList(newList);
   myStorage.plusPlus(newList);
@@ -36,7 +36,18 @@ editTheList.forEach((item) => {
       e.target.parentElement.children[0].children[1].textContent = theValue;
       e.target.parentElement.classList.add('sibling');
       e.target.parentElement.children[3].classList.remove('none');
+      const index = parseInt(e.target.parentElement.children[2].textContent, 10) - 1;
+      myStorage.editItem(index, theValue);
       e.target.style.display = 'none';
     });
+  });
+});
+
+const deleteList = document.querySelectorAll('.btn-remove');
+deleteList.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const getRemoved = e.target.parentElement.parentElement.parentElement.parentElement;
+    const listContainer = document.getElementById('list-container');
+    listContainer.removeChild(getRemoved);
   });
 });
