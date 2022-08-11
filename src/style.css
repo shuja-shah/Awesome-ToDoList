@@ -123,3 +123,9 @@ li {
     height: 15px;
     padding-right: 12px;
 }
+.completed{
+    text-decoration: line-through;
+}
+.edit{
+    display: none;
+}
