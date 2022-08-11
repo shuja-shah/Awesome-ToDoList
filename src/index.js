@@ -3,7 +3,6 @@ import UserInterface from './list.js';
 import CreateList from './addList.js';
 import myStorage from './userStorage.js';
 
-// document.addEventListener('DOMContentLoaded', () => {
 const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -16,12 +15,22 @@ form.addEventListener('submit', (e) => {
   myStorage.plusPlus(newList);
 });
 UserInterface.ShowList();
-// });
-// const myclicky = document.querySelectorAll('.myListi');
-// console.log(myclicky);
-// myclicky.forEach((item) => {
-//   item.addEventListener('click', () => {
-//    alert('hello');
-//    });
-// } );
-// console.log(myclicky);
+
+const editTheList = document.querySelectorAll('.myListi');
+
+editTheList.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    e.target.parentElement.classList.add('none');
+    const template = `
+    <form class = "edit">
+    <input type = "text" class = "input-txt">input</input>
+    <button type = "submit" class = "icon3">ENter</button>
+    <button class = "btn-remove icon3">Remove</button>
+    `;
+    const div = document.createElement('div');
+    div.className = 'edit-div';
+    div.innerHTML = template;
+
+    e.target.parentElement.parentElement.appendChild(div);
+  });
+});

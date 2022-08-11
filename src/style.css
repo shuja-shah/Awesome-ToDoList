@@ -126,6 +126,6 @@ li {
 .completed{
     text-decoration: line-through;
 }
-.edit{
+.none{
     display: none;
 }
