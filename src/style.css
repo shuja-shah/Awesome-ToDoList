@@ -107,59 +107,72 @@ li {
   font-weight: 600;
   letter-spacing: 0.23px;
 }
-#form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-#AddButton{
-    border: none;
-    background-color: white;
+
+#AddButton {
+  border: none;
+  background-color: white;
 }
-.icon3{
-    width: auto;
-    height: 15px;
-    padding-right: 12px;
+
+.icon3 {
+  width: auto;
+  height: 15px;
+  padding-right: 12px;
 }
-.completed{
-    text-decoration: line-through;
+
+.completed {
+  text-decoration: line-through;
 }
-.none{
-    display: none;
+
+.none {
+  display: none;
 }
-.input-txt{
-    width: 80%;
-    height: 48px;
-    font-family: 'Inter', sans-serif;
-    border: none;
-    color: hsl(0, 0%, 14%);
-    letter-spacing: 0.87px;
-    font-weight: 600;
-    background-color:rgb(255, 245, 138);
-    font-size: 16px;
+
+.input-txt {
+  width: 80%;
+  height: 48px;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  color: hsl(0, 0%, 14%);
+  letter-spacing: 0.87px;
+  font-weight: 600;
+  background-color: rgb(255, 245, 138);
+  font-size: 16px;
 }
-.input-txt :focus, textarea:focus, select:focus{
-    outline: none;
+
+.input-txt :focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
-.addButton{
-border: none;
-background-color: white;
+
+.addButton {
+  border: none;
+  background-color: white;
 }
-.btn-remove{
-    border: none;
-    background-color: white;
-    height: 6px;
-    width: auto;
-    padding-bottom: 17px;
+
+.btn-remove {
+  border: none;
+  background-color: white;
+  height: 6px;
+  width: auto;
+  padding-bottom: 17px;
 }
-.btn-remove :hover{
+
+.btn-remove :hover {
   fill: red;
   transform: scale(1.2);
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.addButton :hover{
+
+.addButton :hover {
   fill: green;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
