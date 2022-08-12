@@ -13,7 +13,7 @@ export default class UserInterface {
     listItem.className = 'myListi';
     listItem.innerHTML = `
                 <div class = "sibling">
-                <input type="checkbox" ${item.completed ? 'checked' : ''}>
+                <input class = "checkbox" type="checkbox" ${item.completed ? 'checked' : ''}>
                 <span>${item.description}</span>
                 </div>
                 <form class = "none form-horizontal">

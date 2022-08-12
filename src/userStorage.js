@@ -41,4 +41,14 @@ export default class myStorage {
     });
     localStorage.setItem('myList', JSON.stringify(lists));
   }
+
+  static checkItem(index) {
+    const lists = myStorage.getData();
+    lists.forEach((item) => {
+      if (item.index === index) {
+        item.completed = !item.completed;
+      }
+      localStorage.setItem('myList', JSON.stringify(lists));
+    });
+  }
 }

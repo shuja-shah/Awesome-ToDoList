@@ -2,6 +2,7 @@ import './style.css';
 import UserInterface from './list.js';
 import CreateList from './addList.js';
 import myStorage from './userStorage.js';
+// import Functionality from './functionality.js';
 
 const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
@@ -60,4 +61,19 @@ deleteList.forEach((item) => {
     myStorage.removeItem(index - 1);
     listContainer.removeChild(getRemoved);
   });
+});
+
+const checkbox = document.querySelectorAll('.checkbox');
+checkbox.forEach((item) => {
+  item.addEventListener('change', (e) => {
+    const index = parseInt(e.target.parentElement.parentElement.children[3].textContent, 10);
+    myStorage.checkItem(index);
+  });
+});
+
+const checkItem = document.querySelectorAll('.checkbox');
+checkItem.forEach((item) => {
+  if (item.checked === true) {
+    item.nextElementSibling.style.textDecoration = 'line-through';
+  }
 });
