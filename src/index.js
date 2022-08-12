@@ -9,7 +9,8 @@ form.addEventListener('submit', (e) => {
   const input = document.getElementById('Addition');
   const description = input.value.toString();
   const completed = false;
-  const index = Math.floor(Math.random() * 1000) + 1;
+  // const index = Math.floor(Math.random() * 1000) + 1;
+  const index = myStorage.getData().length + 1;
   const newList = new CreateList(description, completed, index);
   UserInterface.AddList(newList);
   myStorage.plusPlus(newList);
@@ -24,6 +25,8 @@ editTheList.forEach((item) => {
     e.target.parentElement.classList.add('none');
     e.target.parentElement.nextElementSibling.classList.remove('none');
     e.target.parentElement.nextElementSibling.style.display = 'flex';
+    const removeBtn = e.target.parentElement.nextElementSibling.nextElementSibling;
+    removeBtn.classList.remove('none');
     const form = e.target.parentElement.nextElementSibling;
     form.style.justifyContent = 'space-around';
     form.style.alignItems = 'center';
@@ -36,8 +39,12 @@ editTheList.forEach((item) => {
       e.target.parentElement.children[0].children[1].textContent = theValue;
       e.target.parentElement.classList.add('sibling');
       e.target.parentElement.children[3].classList.remove('none');
-      const index = parseInt(e.target.parentElement.children[2].textContent, 10) - 1;
+      const index = parseInt(e.target.parentElement.children[3].textContent, 10);
       myStorage.editItem(index, theValue);
+      const btnRemove = document.querySelectorAll('.btn-remove');
+      btnRemove.forEach((item) => {
+        item.classList.add('none');
+      });
       e.target.style.display = 'none';
     });
   });
@@ -46,8 +53,10 @@ editTheList.forEach((item) => {
 const deleteList = document.querySelectorAll('.btn-remove');
 deleteList.forEach((item) => {
   item.addEventListener('click', (e) => {
-    const getRemoved = e.target.parentElement.parentElement.parentElement.parentElement;
+    const getRemoved = e.target.parentElement.parentElement.parentElement;
     const listContainer = document.getElementById('list-container');
+    const index = parseInt(getRemoved.children[3].textContent, 10);
+    myStorage.removeItem(index);
     listContainer.removeChild(getRemoved);
   });
 });
