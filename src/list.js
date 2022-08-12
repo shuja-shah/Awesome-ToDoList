@@ -4,7 +4,6 @@ export default class UserInterface {
   static ShowList() {
     const theList = myStorage.getData();
     theList.forEach((item) => {
-      // item.index += 1;
       UserInterface.AddList(item);
     });
   }
