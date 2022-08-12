@@ -20,7 +20,7 @@ UserInterface.ShowList();
 const editTheList = document.querySelectorAll('.sibling');
 
 editTheList.forEach((item) => {
-  item.addEventListener('click', (e) => {
+  item.addEventListener('dblclick', (e) => {
     e.target.parentElement.classList.remove('sibling');
     e.target.parentElement.classList.add('none');
     e.target.parentElement.nextElementSibling.classList.remove('none');
