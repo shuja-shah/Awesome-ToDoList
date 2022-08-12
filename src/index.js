@@ -9,7 +9,6 @@ form.addEventListener('submit', (e) => {
   const input = document.getElementById('Addition');
   const description = input.value.toString();
   const completed = false;
-  // const index = Math.floor(Math.random() * 1000) + 1;
   const index = myStorage.getData().length + 1;
   const newList = new CreateList(description, completed, index);
   UserInterface.AddList(newList);
@@ -56,7 +55,8 @@ deleteList.forEach((item) => {
     const getRemoved = e.target.parentElement.parentElement.parentElement;
     const listContainer = document.getElementById('list-container');
     const index = parseInt(getRemoved.children[3].textContent, 10);
-    myStorage.removeItem(index);
+    myStorage.UpdateMyIndex(index);
+    myStorage.removeItem(index - 1);
     listContainer.removeChild(getRemoved);
   });
 });

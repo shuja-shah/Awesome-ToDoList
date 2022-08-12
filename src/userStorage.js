@@ -30,4 +30,15 @@ export default class myStorage {
       localStorage.setItem('myList', JSON.stringify(lists));
     });
   }
+
+  static UpdateMyIndex(index) {
+    const lists = myStorage.getData();
+    const removeList = lists.filter((item) => item.index !== index);
+    const newID = [];
+    removeList.forEach((el, i) => {
+      el.index = i + 1;
+      newID.push(el);
+    });
+    localStorage.setItem('myList', JSON.stringify(lists));
+  }
 }
