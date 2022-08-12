@@ -13,6 +13,7 @@ form.addEventListener('submit', (e) => {
   const newList = new CreateList(description, completed, index);
   UserInterface.AddList(newList);
   myStorage.plusPlus(newList);
+  window.location.reload();
 });
 UserInterface.ShowList();
 
