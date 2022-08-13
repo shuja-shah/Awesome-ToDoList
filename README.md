@@ -24,12 +24,14 @@ To get a local copy up and running follow these simple example steps.
  - Install using Code button in repo and Download the zip files. 
 
 ### Usage
-    - To add a book to the list, click the + button.
-    - To remove a book from the list, click the - button.
+    - To add a Task , User the Input box and type in the task.
+    - To delete a Task , Double click on the task and click the Delete Button.
+    -To Edit A Task, Double click on the task and an in built editor will apear :).
+    - TO Remove ALl the completed tasks , Click the Clear Completed Button.
 
 ### Run tests
-    run test using ``` npm hint . ``` in the terminal.
-    
+    run test using ``` npx hint . ``` in the terminal.
+    run tests using ``` npx eslint . ``` in the terminal.
 
 
 
