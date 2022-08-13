@@ -2,7 +2,6 @@ import './style.css';
 import UserInterface from './list.js';
 import CreateList from './addList.js';
 import myStorage from './userStorage.js';
-// import Functionality from './functionality.js';
 
 const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
@@ -68,6 +67,7 @@ checkbox.forEach((item) => {
   item.addEventListener('change', (e) => {
     const index = parseInt(e.target.parentElement.parentElement.children[3].textContent, 10);
     myStorage.checkItem(index);
+    window.location.reload();
   });
 });
 
@@ -75,5 +75,15 @@ const checkItem = document.querySelectorAll('.checkbox');
 checkItem.forEach((item) => {
   if (item.checked === true) {
     item.nextElementSibling.style.textDecoration = 'line-through';
+  } else {
+    item.nextElementSibling.style.textDecoration = 'none';
   }
+});
+
+const clearAllButton = document.querySelector('.clearAll');
+
+clearAllButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  myStorage.clearAllCompleted();
+  window.location.reload();
 });
