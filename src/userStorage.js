@@ -41,4 +41,20 @@ export default class myStorage {
     });
     localStorage.setItem('myList', JSON.stringify(lists));
   }
+
+  static checkItem(index) {
+    const lists = myStorage.getData();
+    lists.forEach((item) => {
+      if (item.index === index) {
+        item.completed = !item.completed;
+      }
+      localStorage.setItem('myList', JSON.stringify(lists));
+    });
+  }
+
+  static clearAllCompleted() {
+    const lists = myStorage.getData();
+    const newList = lists.filter((item) => item.completed === false);
+    localStorage.setItem('myList', JSON.stringify(newList));
+  }
 }
