@@ -6,7 +6,7 @@
 
 # Live Demo
 
-[Live Demo Link](https://shuja-shah.github.io/Awesome-ToDoList/dist/))
+[Live Demo Link](https://shuja-shah.github.io/Awesome-ToDoList/dist/)
 
 ## Built With
 
